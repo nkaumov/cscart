@@ -35,10 +35,6 @@
 
                             {if $discussion.type == "C" || $discussion.type == "B"}
                                 <div class="ty-discussion-post__message">{$post.message|escape|nl2br nofilter}</div>
-<<<<<<< HEAD
-                                <p>test</p
-=======
->>>>>>> ee6a2812 (first commit)
                             {/if}
                         </div>
                     {/hook}

@@ -21,27 +21,27 @@
                 {foreach from=$discussion.posts item=post}
                     <div class="ty-discussion-post__content ty-mb-l">
                         {hook name="discussion:items_list_row"}
+                        <span class="ty-discussion-post__author">{$post.name}</span>
+                        <span class="ty-discussion-post__date">{$post.timestamp|date_format:"`$settings.Appearance.date_format`, `$settings.Appearance.time_format`"}</span>
                         <div class="ty-discussion-post {cycle values=", ty-discussion-post_even"}" id="post_{$post.post_id}">
+                            <span class="ty-caret"> <span class="ty-caret-outer"></span> <span class="ty-caret-inner"></span></span>
+
+                            {if $discussion.type == "Addons\\Discussion\\DiscussionTypes::TYPE_RATING"|enum
+                                || $discussion.type == "Addons\\Discussion\\DiscussionTypes::TYPE_COMMUNICATION_AND_RATING"|enum
+                                && $post.rating_value > 0
+                            }
+                                <div class="clearfix ty-discussion-post__rating">
+                                    {include file="addons/discussion/views/discussion/components/stars.tpl" stars=$post.rating_value|fn_get_discussion_rating}
+                                </div>
+                            {/if}
 
                             {if $discussion.type == "Addons\\Discussion\\DiscussionTypes::TYPE_COMMUNICATION"|enum
                                 || $discussion.type == "Addons\\Discussion\\DiscussionTypes::TYPE_COMMUNICATION_AND_RATING"|enum
                             }
                                 <div class="ty-discussion-post__message">{$post.message|escape|nl2br nofilter}</div>
                             {/if}
-
-                            <span class="ty-caret-bottom"><span class="ty-caret-outer"></span><span class="ty-caret-inner"></span></span>
-
                         </div>
-                        <span class="ty-discussion-post__author">{$post.name}</span>
-                        <span class="ty-discussion-post__date">{$post.timestamp|date_format:"`$settings.Appearance.date_format`, `$settings.Appearance.time_format`"}</span>
-                        {if $discussion.type == "Addons\\Discussion\\DiscussionTypes::TYPE_RATING"|enum
-                            || $discussion.type == "Addons\\Discussion\\DiscussionTypes::TYPE_COMMUNICATION_AND_RATING"|enum
-                            && $post.rating_value > 0
-                        }
-                            <div class="clearfix ty-discussion-post__rating">
-                                {include file="addons/discussion/views/discussion/components/stars.tpl" stars=$post.rating_value|fn_get_discussion_rating}
-                            </div>
-                        {/if}
+
                         {/hook}
                     </div>
                 {/foreach}
