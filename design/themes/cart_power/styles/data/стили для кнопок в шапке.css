@@ -1,0 +1,47 @@
+button {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12.19px;
+    text-align: left;
+    background: #F5F5F7;
+    border: none;
+    color: black;
+    cursor: pointer;
+    position: absolute; /* Для управления позицией с помощью top и left */
+    opacity: 1; /* Если opacity нужно оставить на 0 */
+}
+
+.button-delivery {
+    width: 113px;
+    height: 12px;
+    top: 14px;
+    left: 593px;
+}
+
+.button-return {
+    width: 50px;
+    height: 12px;
+    top: 14px;
+    left: 738.59px;
+}
+
+.button-pickup-points {
+    width: 115px;
+    height: 12px;
+    top: 14px;
+    left: 821.59px;
+}
+
+.button-contacts {
+    width: 62px;
+    height: 12px;
+    top: 14px;
+    left: 969.59px;
+}
+
+/* Вы можете добавить hover эффекты для визуализации при наведении курсора */
+button:hover {
+    opacity: 1; /* Чтобы кнопки появлялись при наведении */
+    background-color: #444444;
+}
