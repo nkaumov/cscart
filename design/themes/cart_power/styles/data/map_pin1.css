@@ -1,42 +1,7 @@
-/*стиль для карты*/
-
-.cp-location-block {
-    position: absolute;
-    width: 94px;
-    height: 16px;
-    top: 12px;
-    left: 360px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    opacity: 1; /* Установите 1, если блок должен быть видимым по умолчанию */
-    transition: opacity 0.3s ease;
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
-.cp-location-icon {
-    width: 16px;
-    height: 16px;
-    opacity: 1; /* Установите 1, если иконка должна быть видимой по умолчанию */
-}
-
-.cp-location-text {
-    width: 70px;
-    height: 15px;
-    opacity: 1; /* Установите 1, если текст должен быть видимым по умолчанию */
+.alternate-font {
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 14.63px;
-    text-align: left;
 }
-
-/* Пример анимации появления */
-.cp-location-block.visible {
-    opacity: 1;
-}
-
-.cp-location-block.visible .cp-location-icon,
-.cp-location-block.visible .cp-location-text {
-    opacity: 1;
-}
-
