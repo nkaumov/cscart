@@ -1,3 +1,4 @@
+{literal}
 <style>
     .products-section {
         max-width: 1100px;
@@ -93,6 +94,7 @@
         color: #999;
     }
 </style>
+{/literal}
 
 <div class="products-section">
     <div class="products-header">
@@ -111,7 +113,12 @@
     </div>
 </div>
 
+<p>Если вы видите этот текст, шаблон подключен правильно.</p>
+
+{literal}
 <script>
+    console.log("Скрипт загружен");
+
     const products = [
         {title: 'Dualshock 4', stock: 'В наличии', currentPrice: '5 800 Р', oldPrice: '6 300 Р', image: '{$config.current_location}/design/themes/cart_power/media/images/newpr1.svg'},
         {title: 'Футболка синяя', stock: 'В наличии', currentPrice: '5 800 Р', oldPrice: '6 300 Р', image: '{$config.current_location}/design/themes/cart_power/media/images/newpr2.svg'},
@@ -120,8 +127,10 @@
     ];
 
     const productCarousel = document.getElementById('product-carousel');
+    console.log("Элемент product-carousel:", productCarousel);
 
     function generateProductCard(product) {
+        console.log("Генерация карточки для продукта:", product.title);
         return `
             <div class="product-card">
                 <img src="${product.image}" alt="${product.title}" class="product-image">
@@ -152,3 +161,4 @@
         productCarousel.scrollBy({ left: -300, behavior: 'smooth' });
     });
 </script>
+{/literal}
