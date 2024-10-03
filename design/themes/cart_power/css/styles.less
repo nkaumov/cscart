@@ -18,10 +18,8 @@
     @import "tygh/print.less";
 }
 
-//
 @import "my_styles.less";
 @import "addons/my_custom_styles.less";
-
 
 
 /* ==========================================================================
@@ -2275,8 +2273,9 @@ Product temlates
     width: auto;
 }
 .ty-grid-list__item-name {
-    margin-top: 5px;
-    margin-bottom: 15px;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 5px;
     display: block;
     width: 100%;
     overflow: hidden;
@@ -8808,3 +8807,192 @@ input[type="checkbox"] {
 @import "tygh/components/spinner.less";
 @import "tygh/components/content_more.less";
 @import "tygh/components/phone.less";
+
+
+.custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.custom-products-header {
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;   
+    max-width: 1200px; 
+}
+
+.custom-section-title {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34.13px;
+    text-align: left;
+    max-width: 1200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.custom-grid-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    gap: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для карточек товаров */
+.custom-grid-list__item {
+    position: relative;
+    width: 281px;
+    height: 316px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Увеличение высоты убрано */
+    z-index: 1;
+}
+
+.custom-grid-list__item:hover {
+    border-color: #000;
+    transform: scale(1.05); /* Легкое увеличение без изменения высоты */
+    z-index: 10;
+}
+/* Общий стиль для карточек */
+.custom-grid-list__item {
+    position: relative;
+    width: 281px;
+    height: 316px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, height 0.3s ease; /* Плавное изменение высоты */
+}
+
+
+
+/* Контейнер для изображения */
+.custom-grid-list__image-container {
+    width: 100%;
+    height: 208px;
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-grid-list__image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    display: block; /* Убедитесь, что изображение является блочным элементом */
+    margin: 0 auto; /* Центрирование изображения */
+}
+
+
+/* Правильное размещение текста и цены */
+.custom-grid-list__item-name,
+.custom-availability,
+.custom-price,
+.custom-old-price {
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: left;
+}
+
+.custom-grid-list__item-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0 0 0;
+}
+
+.custom-availability {
+    font-size: 12px;
+    font-weight: 500;
+    color: green;
+    margin: 5px 0;
+}
+
+.custom-price {
+    font-size: 19px;
+    font-weight: 700;
+    color: #000;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.custom-old-price {
+    font-size: 14px;
+    font-weight: 500;
+    color: #777;
+    text-decoration: line-through;
+    float: right;
+    margin: 5px 0;
+}
+
+/* Кнопки, которые появляются при наведении */
+.custom-view-button,
+.custom-favorite-button {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    width: 120px;
+    height: 40px;
+    background-color: #006FE7;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.custom-view-button {
+    left: 20px;
+}
+
+.custom-favorite-button {
+    right: 20px;
+    background-color: transparent;
+    font-size: 24px;
+    color: #ccc;
+}
+
+.custom-grid-list__item:hover .custom-view-button,
+.custom-grid-list__item:hover .custom-favorite-button {
+    display: block;
+    opacity: 1;
+}
+
+/* Стили для активного состояния избранного */
+.custom-favorite-button.active {
+    color: red;
+}
+
+/* Стили для карусельных стрелок */
+.custom-carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
+
+.custom-carousel-arrow.left {
+    left: 10px;
+}
+
+.custom-carousel-arrow.right {
+    right: 10px;
+}
+
+
