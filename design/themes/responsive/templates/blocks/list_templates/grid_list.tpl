@@ -1,6 +1,10 @@
 {if $products}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
     {script src="js/tygh/exceptions.js"}
 
     {if !$no_pagination}
@@ -36,15 +40,13 @@
         <div class="custom-grid-list">
         
         {strip}
-            {foreach from=$splitted_products item="sproducts" name="sprod"}
-                {foreach from=$sproducts item="product" name="sproducts"}
-                    <div class="custom-grid-list__item">
-                        {if $product}
-                            <div class="custom-grid-list__image-container">
-    {include file="views/products/components/product_icon.tpl" product=$product show_gallery=true}
-</div>
-
-
+            {foreach from=$splitted_products item="sproducts_group" name="sprod"}
+    {foreach from=$sproducts_group item="product" name="sproduct_loop"}
+        <div class="custom-grid-list__item">
+            {if $product}
+                <div class="custom-grid-list__image-container">
+                    {include file="views/products/components/product_icon.tpl" product=$product show_gallery=false}
+                </div>
 
 
                             <div class="custom-grid-list__item-name">
@@ -73,10 +75,21 @@
     {/if}
 
     <script>
-        function toggleFavorite(btn) {
-            btn.classList.toggle('active');
-        }
-    </script>
+    function toggleFavorite(btn) {
+        btn.classList.toggle('active');
+    }
+
+    // Initialize Swiper
+    document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+</script>
+
 
 {/if}
 
