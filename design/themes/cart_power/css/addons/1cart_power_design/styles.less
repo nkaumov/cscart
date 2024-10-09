@@ -2,6 +2,8 @@
 Cart Power Dssign
 ========================================================================== */
 
+
+
 .my_block img {
     max-width: 100%;
     height: auto;
@@ -15,22 +17,70 @@ Cart Power Dssign
 .my_block .ty-grid-list__image {
     position: relative;
     padding: 18px 0;
-    border: 1px solid #ebebeb;
+    border: 1px solid #E7E7E7;
     background: #fff;
     text-align: center;
     min-height: 50px;
     width: 280px;
-    height: 208px;
-    /* top: 1006px; */
-    /* left: 364px; */
-    /* gap: 0px; */
     border-radius: 19.96px;
-    
-}    
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.my_block .ty-grid-list__image::before {
+    position: relative;
+    padding: 18px 0;
+    border: 1px solid #db0000;
+    background: #ffffff00;
+    text-align: center;
+    min-height: 50px;
+    width: 280px;
+    border-radius: 19.96px;
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.my_block .ty-grid-list__image:hover::before {
+    border-color: #E7E7E7;
+    width: 298px;
+    height: 405px;
+}
+
+
+
+.my_block .ty-grid-list__item:hover .ty-grid-list__image {
+    border: none; /* Убираем бордер при наведении */
+    background: #fff;
+}
+
+.my_block .ty-grid-list__item:hover .ty-grid-list__control {
+    display: block;
+    position: absolute;
+    z-index: 110;
+    background: #fff;
+    border: 1px solid #E7E7E7; /* Новый бордер */
+    border-top: 0;
+    margin-left: -11px;
+    padding: 0px 10px 25px 10px;
+    border-radius: 0px 0px 19.96px 19.96px; /* Округление нижней части */
+    transition: all 0.3s ease; /* Плавный переход для бордера */
+}
+
+
+
+
 
 .tygh-content > div {
     background-color: #fff;
     max-width: 1200px;
+}
+.my_block .ty-grid-list__item {
+    padding: 10px 10px 25px 10px;
+    position: relative;
+    border: 1px solid transparent;
+    .clearfix();
+
+    &--overlay:hover {
+        border-color: #E7E7E7;
+    }
 }
 
 .ty-grid-list__control .ty-btn {
@@ -55,6 +105,237 @@ Cart Power Dssign
 }
 
 
+.my_block .product-title {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.07px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.my_block .ty-grid-list__item-name .product-title {
+    display: block;
+    color: #1A2033;
+    word-wrap: break-word;
+}
 
+.my_block h1, h2 {
+    text-decoration: none;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    font-family: Montserrat Alternates, sans-serif;
+}
+
+.my_block .ty-price {
+    margin: 6px 0;
+    color: #000000;
+}
+
+.my_block .ty-list-price {
+    color: #000000;
+    line-height: 100%;
+    font-size: 13px;
+}
+
+// .my_block .ty-price .ty-list-price {
+//     display: flex;
+//     flex-direction: column-reverse; 
+// }
+
+.my_block .ty-grid-list__control .ty-btn {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: #006fe7;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    left: 665px;
+    gap: 10px;
+    border-radius: 16px;
+    opacity: 0px;
+    font-family: Montserrat Alternates, sans-serif;
+}
+
+.my_block .ty-grid-list__control {
+    display: none;
+    padding: 208px;
+    padding-top: 5px;
+    border-radius: 0px 0px 19.96px 19.96px;
+    border: 1px solid #63f02b;
+    border-color: #000000;
+    color: #000000;
+
+}
+
+// .my_block .ty-icon-right-circle {
+//     // position: absolute;
+//     // top: 50%;
+//     // transform: translateY(-50%);
+//     // visibility: hidden;
+//     // font-size: 24px; /* Размер галочки */
+//     // color: rgb(0, 0, 0); /* Цвет стрелки */
+//     // cursor: pointer;
+//     // user-select: none;
+//     // width: auto; /* Убираем фиксированные размеры */
+//     // height: auto;
+//     // border: none; /* Убираем обводку, если есть */
+//     // background: none; /* Убираем фон */
+//     width: 24px;
+//     height: 24px;
+    
+    
+//     padding: 6px 0px 6px 0px;
+//     gap: 0px;
+//     opacity: 0px;
+    
+// }
+
+.my_block .ty-icon-left-circle {
+    width: 24px !important;
+    height: 24px !important;
+    padding: 6px 0px !important;
+    color: rgba(255, 255, 255, 0); /* Цвет стрелки */
+    background-image: url('/design/themes/cart_power/media/images/chevron-left.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    opacity: 1 !important;
+    transform: rotate(180deg) !important;
+}
+
+.my_block .ty-icon-right-circle {
+    width: 24px !important;
+    height: 24px !important;
+    padding: 6px 0px !important;
+    color: rgba(255, 255, 255, 0);
+    background-image: url('/design/themes/cart_power/media/images/chevron-left.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    opacity: 1 !important;
+    
+}
+
+//ОТЗЫВЫ
+
+
+.my_block .ty-discussion-post {
+    width: 100%; /* Ширина 100% */
+    max-height: none; /* Убираем ограничение по высоте */
+    overflow: visible; /* Убираем скрытие контента */
+    margin: 0 0 15px 0; /* Отступы между отзывами */
+    padding: 15px;
+    border: 1px solid #eee; /* Граница блока */
+    background-color: #fff; /* Цвет фона */
+    border-radius: 12px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    display: block; /* Отображаем каждый блок отдельно */
+    clear: both; 
+}
+
+/* Дополнительно для выравнивания текста и шрифта */
+.my_block .ty-discussion-post p {
+    font-size: 16px; /* Размер шрифта */
+    font-family: 'Montserrat', sans-serif; /* Шрифт */
+    color: #333; /* Цвет текста */
+    line-height: 1.5; /* Межстрочное расстояние */
+}
+
+/* Родительский контейнер для отзывов */
+.my_block .ty-scroller-discussion-list {
+    display: block; /* Отображаем все блоки отдельно */
+    gap: 15px; /* Добавляем отступ между отзывами */
+    width: 100%; /* Ширина на всю доступную область */
+}
+
+/* Общие стили для контейнеров отзывов */
+.my_block .ty-scroller-discussion-list__item {
+    width: 100%; /* Занимает всю ширину контейнера */
+    display: block; /* Отображаем каждый блок отдельно */
+    margin-bottom: 15px; /* Отступ снизу для каждой карточки */
+}
+
+.my_block .ty-discussion-post__content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.my_block .ty-discussion-post {
+    width: 100%; /* Теперь ширина 100% */
+    margin: 0 0 15px 0; /* Центрируем каждый отзыв */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    clear: both;
+}
+
+/* Сообщение пользователя */
+.my_block .ty-discussion-post__message {
+    line-height: 1.5;
+    font-size: 14px;
+    margin-top: 10px;
+    overflow: hidden; /* Скрываем содержимое, если оно превышает доступное пространство */
+    text-overflow: ellipsis; /* Добавляем многоточие, если текст выходит за пределы */
+    max-height: 150px; /* Ограничиваем максимальную высоту для текста */
+}
+
+/* Контейнер с именем и датой */
+.my_block .ty-discussion-post__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Имя пользователя */
+.my_block .ty-discussion-post__author {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Дата отзыва */
+.my_block .ty-discussion-post__date {
+    color: #adadad;
+    font-size: 12px;
+}
+
+/* Рейтинг */
+.my_block .ty-discussion-post__rating {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.my_block .ty-stars {
+    color: rgb(251, 217, 50);
+}
+
+.my_sub .ty-btn-go::before {
+    content: "Подписаться"; /* Добавляем текст */
+    position: absolute; /* Позиционируем текст абсолютно относительно родительского элемента */
+    top: 5px; /* Сместите его по вертикали, как и для иконки */
+    left: 12px; /* Сместите его по горизонтали, как и для иконки */
+    font-size: 20px; /* Размер шрифта */
+    line-height: 20px; /* Высота строки */
+    color: #000000; /* Цвет текста */
+}
+
+.my_sub .ty-btn-go {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    padding: 0 10px;
+    min-width: 32px;
+    height: 30px;
+    border: 0px;
+    border-left: 1px solid #cdcdcd;
+    background: #006FE7;
+    cursor: pointer;
+    box-sizing: border-box;
+}
 
 /* /Cart Power Dssign */

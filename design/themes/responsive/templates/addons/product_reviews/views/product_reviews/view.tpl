@@ -10,6 +10,7 @@
 *}
 
 <div class="ty-product-reviews-view" id="{if $container_id}{$container_id}{else}content_product_reviews{/if}">
+
     {if $wrap == true}
         {capture name="content"}
         {include file="common/subheader.tpl" title=$title}

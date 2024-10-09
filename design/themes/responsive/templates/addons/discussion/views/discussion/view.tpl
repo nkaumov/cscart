@@ -27,6 +27,7 @@
                                 || $discussion.type == "Addons\\Discussion\\DiscussionTypes::TYPE_COMMUNICATION_AND_RATING"|enum
                             }
                                 <div class="ty-discussion-post__message">{$post.message|escape|nl2br nofilter}</div>
+                                <p>test</p>
                             {/if}
 
                             <span class="ty-caret-bottom"><span class="ty-caret-outer"></span><span class="ty-caret-inner"></span></span>
