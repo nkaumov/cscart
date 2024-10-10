@@ -18,6 +18,18 @@ Cart Power Dssign
     margin-top: 20px;
 }
 
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .my_logo .ty-logo-container__image {
+        margin-top: 10px;
+      
+        width: 80%; 
+        max-width: 200px;
+        margin-right: 75px;
+        align-items: center;
+    }
+}
+
 .my_valute a{
     
     font-family: 'Montserrat Alternates', sans-serif;
@@ -206,34 +218,13 @@ Cart Power Dssign
 
 }
 
-// .my_block .ty-icon-right-circle {
-//     // position: absolute;
-//     // top: 50%;
-//     // transform: translateY(-50%);
-//     // visibility: hidden;
-//     // font-size: 24px; /* Размер галочки */
-//     // color: rgb(0, 0, 0); /* Цвет стрелки */
-//     // cursor: pointer;
-//     // user-select: none;
-//     // width: auto; /* Убираем фиксированные размеры */
-//     // height: auto;
-//     // border: none; /* Убираем обводку, если есть */
-//     // background: none; /* Убираем фон */
-//     width: 24px;
-//     height: 24px;
-    
-    
-//     padding: 6px 0px 6px 0px;
-//     gap: 0px;
-//     opacity: 0px;
-    
-// }
+
 
 .my_block .ty-icon-left-circle {
     width: 24px !important;
     height: 24px !important;
     padding: 6px 0px !important;
-    color: rgba(255, 255, 255, 0); /* Цвет стрелки */
+    color: rgba(255, 255, 255, 0); 
     background-image: url('/design/themes/cart_power/media/images/chevron-left.svg') !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -253,6 +244,34 @@ Cart Power Dssign
     background-size: contain !important;
     opacity: 1 !important;
     
+}
+
+@media (max-width: 768px) {
+    .my_block .ty-grid-list__image {
+        width: 100%; 
+    }
+
+    .my_block .ty-grid-list__item {
+        padding: 5px;
+    }
+
+    .my_block .ty-grid-list__image:hover::before {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .ty-grid-list__control .ty-btn {
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+
+    .my_block h1, h2 {
+        font-size: 22px; 
+    }
+
+    .my_block .product-title {
+        font-size: 12px; 
+    }
 }
 
 ///////////////////////////////ОТЗЫВЫ
@@ -304,15 +323,13 @@ Cart Power Dssign
     line-height: 1.5; 
 }
 
-/* Родительский контейнер для отзывов */
 .my_reviews .ty-scroller-discussion-list {
     flex-direction: column;
-    display: block; /* Отображаем все блоки отдельно */
+    display: block; 
     gap: 15px; 
     width: 100%; 
 }
 
-/* стили для контейнеров отзывов */
 .my_reviews .ty-scroller-discussion-list__item {
     width: 100%; 
     display: block; 
@@ -324,24 +341,8 @@ Cart Power Dssign
     margin-bottom: 10px;
 }
 
-// .my_reviews .ty-discussion-post {
-//     width: 506px;
-//     height: 252px; 
-//     position: relative;
-//     margin: 0 auto 15px auto; 
-//     padding: 15px;
-//     border-radius: 8px;
-//     border: 1px solid #E8E8E8;
-//     box-sizing: border-box;
-//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//     display: flex;
-//     flex-direction: column;
-//     gap: 10px;
-//     clear: both;
-// }
 
 
-/* Сообщение пользователя */
 .my_reviews .ty-discussion-post__message {
     line-height: 1.5;
     font-size: 14px;
@@ -351,26 +352,22 @@ Cart Power Dssign
     max-height: 150px; 
 }
 
-/* Контейнер с именем и датой */
 .my_reviews .ty-discussion-post__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Имя пользователя */
 .my_reviews .ty-discussion-post__author {
     font-weight: bold;
     font-size: 16px;
 }
 
-/* Дата отзыва */
 .my_reviews .ty-discussion-post__date {
     color: #adadad;
     font-size: 12px;
 }
 
-/* Рейтинг */
 .my_reviews .ty-discussion-post__rating {
     font-size: 15px;
     margin-bottom: 5px;
@@ -384,6 +381,30 @@ Cart Power Dssign
     background-color: #006FE7;
     border-radius: 19px;
     font-family: Montserrat Alternates, sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .my_reviews .ty-discussion-post {
+        width: 100%;
+        height: auto;
+        margin: 0 auto; 
+        padding: 10px; 
+    }
+
+    .my_reviews .ty-discussion-post p {
+        font-size: 14px; 
+    }
+
+    .my_reviews .ty-discussion-post__author,
+    .my_reviews .ty-discussion-post__date {
+        font-size: 14px; 
+    }
+
+    .my_reviews .ty-discussion-post__message {
+        font-size: 12px; 
+        max-height: 100px; 
+    }
 }
 
 /////////////////////////////////////////
@@ -469,6 +490,32 @@ Cart Power Dssign
     box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+    .my_blog h1, h2 {
+        font-size: 24px;
+    }
+
+    .my_blog .ty-blog__header {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .my_blog .ty-blog__title {
+        font-size: 22px; 
+    }
+
+    .my_blog .ty-blog__date {
+        font-size: 14px; 
+    }
+
+    .my_blog .ty-no-image__icon {
+        width: 24px; 
+        height: 24px;
+        font-size: 24px;
+        margin: -12px 0 0 -12px; 
+    }
+}
+
 
 //// ПОПУЛЯРНЫЕ БРЕНДЫ
 
@@ -484,7 +531,7 @@ Cart Power Dssign
     font-style: normal;
     font-size: 28px;
     font-family: 'Montserrat Alternates', sans-serif;
-    margin-bottom: 20px; /* Отступ снизу для увеличения расстояния */
+    margin-bottom: 20px; 
 }
 
 
@@ -496,12 +543,12 @@ Cart Power Dssign
     
 }
 .my_brands .brand-image-container {
-    padding: 20px; /* Размер отступов вокруг изображения */
-    border-radius: 24px; /* Округлённые углы оболочки */
-    background-color: #fff; /* Цвет фона оболочки */
+    padding: 20px; 
+    border-radius: 24px; 
+    background-color: #fff; 
     display: flex;
-    justify-content: center; /* Горизонтальное выравнивание */
-    align-items: center; /* Вертикальное выравнивание */
+    justify-content: center;
+    align-items: center; 
     width: 171px;
     height: 171px;
     margin-left: 22px;
@@ -522,6 +569,38 @@ Cart Power Dssign
     opacity: 0.7;
 }
 
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .my_brands {
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .my_brands h1, h2 {
+        font-size: 24px; 
+        margin-bottom: 15px; 
+    }
+
+    .my_brands .brand-image-container {
+        width: 100%; 
+        height: auto; 
+        margin-left: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .my_brands .owl-theme .owl-controls .owl-buttons div {
+        width: 28px; 
+        font-size: 10px; 
+        padding: 2px 8px; 
+    }
+    
+}
+/* Скрыть кнопки управления на мобильных устройствах */
+@media (max-width: 768px) {
+    .my_brands .owl-theme .owl-controls .owl-buttons div {
+        display: none; 
+    }
+}
 
 
 ////////////////////////////////////my_podval
@@ -538,21 +617,21 @@ Cart Power Dssign
     justify-content: center;
     text-align: center;
     padding: 20px;
-    background-color: #f1f1f1; /* Цвет фона можно настроить */
-    max-width: 1200px; /* Ограничение ширины всего контента подвала */
-    margin: 0 auto; /* Центрирование по горизонтали */
+    background-color: #f1f1f1; 
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .my_podval_down button {
     padding: 10px 20px;
-    width: 100%; /* Кнопки занимают всю ширину контейнера */
-    max-width: 300px; /* Ограничение ширины кнопок */
-    margin-top: 10px; /* Отступы между кнопками */
+    width: 100%; 
+    max-width: 300px; 
+    margin-top: 10px; 
 }
 
 @media (min-width: 768px) {
     .my_podval_down button {
-        width: auto; /* Убираем ограничение ширины кнопок на больших экранах */
+        width: auto;
     }
 }
 
