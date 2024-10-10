@@ -3,6 +3,7 @@
 {if $items}
 
 <div class="ty-blog-sidebox">
+
     <ul class="ty-blog-sidebox__list">
 {foreach from=$items item="page"}
         <li class="ty-blog-sidebox__item">

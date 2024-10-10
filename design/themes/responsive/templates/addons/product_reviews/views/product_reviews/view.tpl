@@ -51,6 +51,7 @@
             product_reviews=$product_reviews
         }
 
+
     </section>
 
     {if $wrap == true}
