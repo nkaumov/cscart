@@ -18,12 +18,17 @@
     <div class="owl-theme ty-owl-controls">
         <div class="owl-controls clickable owl-controls-outside" id="owl_outside_nav_{$block.block_id}">
             <div class="owl-buttons">
-                <div id="owl_prev_{$obj_prefix}" class="owl-prev">{include_ext file="common/icon.tpl" class="ty-icon-left-open-thin"}</div>
-                <div id="owl_next_{$obj_prefix}" class="owl-next">{include_ext file="common/icon.tpl" class="ty-icon-right-open-thin"}</div>
+                <div id="owl_prev_{$obj_prefix}" class="owl-prev">
+                    <img src="{$config.current_location}/design/themes/cart_power/media/images/prev_btn.svg" alt="prev">
+                </div>
+                <div id="owl_next_{$obj_prefix}" class="owl-next">
+                    <img src="{$config.current_location}/design/themes/cart_power/media/images/next_btn.svg" alt="next">
+                </div>
             </div>
         </div>
     </div>
 {/if}
+
 
 <div id="scroll_list_{$block.block_id}" class="owl-carousel ty-scroller"
     data-ca-scroller-item="{$item_quantity}"
@@ -35,7 +40,11 @@
     {foreach from=$brands item="brand" name="for_brands"}
             {include file="common/image.tpl" assign="object_img" class="ty-grayscale" image_width=$block.properties.thumbnail_width image_height=$block.properties.thumbnail_width images=$brand.image_pair no_ids=true lazy_load=true obj_id="scr_`$block.block_id`000`$brand.variant_id`"}
             <div class="ty-center ty-scroller__item">
-                <a href="{"product_features.view?variant_id=`$brand.variant_id`"|fn_url}">{$object_img nofilter}</a>
+                <a href="{"product_features.view?variant_id=`$brand.variant_id`"|fn_url}">
+                <div class="brand-image-container">
+                {$object_img nofilter}
+                </div>
+                </a>
             </div>
     {/foreach}
 </div>

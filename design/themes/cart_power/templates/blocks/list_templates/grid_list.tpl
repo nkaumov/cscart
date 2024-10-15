@@ -35,19 +35,18 @@
                     <div class="ty-column{$columns}">
                         {if $product}
                             {assign var="obj_id" value=$product.product_id}
-                            {assign var="obj_id_prefix" value="`$obj_prefix``$product.product_id`"}
+                            {assign var="obj_id_prefix" value="$obj_prefix$product.product_id"}
                             {include file="common/product_data.tpl" product=$product}
                             
                             <div class="ty-grid-list__item ty-quick-view-button__wrapper 
                                 {if $settings.Appearance.enable_quick_view == 'Y' || $show_features} ty-grid-list__item--overlay{/if}">
-                                {assign var="form_open" value="form_open_`$obj_id`"}
+                                {assign var="form_open" value="form_open_$obj_id"}
                                 {$smarty.capture.$form_open nofilter}
                                 {hook name="products:product_multicolumns_list"}
-                                        <div class="ty-grid-list__image">
+                                        <div class="my_block ty-grid-list__image">
                                             {include file="views/products/components/product_icon.tpl" product=$product show_gallery=true}
 
-                                            {assign var="product_labels" value="product_labels_`$obj_prefix``$obj_id`"}
-                                            {$smarty.capture.$product_labels nofilter}
+                                            
                                         </div>
 
                                         <div class="ty-grid-list__item-name">
@@ -60,25 +59,20 @@
                                             <bdi>{$smarty.capture.$name nofilter}</bdi>
                                         </div>
 
-                                        {assign var="rating" value="rating_$obj_id"}
-                                        {if $smarty.capture.$rating|trim}
-                                            <div class="grid-list__rating">
-                                                {$smarty.capture.$rating nofilter}
-                                            </div>
-                                        {/if}
+                                        
 
                                         {hook name="products:list_price_block"}
                                             <div class="ty-grid-list__price {if $product.price == 0}ty-grid-list__no-price{/if}">
-                                                {assign var="old_price" value="old_price_`$obj_id`"}
+                                                {assign var="price" value="price_$obj_id"}
+                                                {$smarty.capture.$price nofilter}
+                                                
+                                                {assign var="old_price" value="old_price_$obj_id"}
                                                 {if $smarty.capture.$old_price|trim}{$smarty.capture.$old_price nofilter}{/if}
 
-                                                {assign var="price" value="price_`$obj_id`"}
-                                                {$smarty.capture.$price nofilter}
-
-                                                {assign var="clean_price" value="clean_price_`$obj_id`"}
+                                                {assign var="clean_price" value="clean_price_$obj_id"}
                                                 {$smarty.capture.$clean_price nofilter}
 
-                                                {assign var="list_discount" value="list_discount_`$obj_id`"}
+                                                {assign var="list_discount" value="list_discount_$obj_id"}
                                                 {$smarty.capture.$list_discount nofilter}
                                             </div>
                                         {/hook}
@@ -93,7 +87,7 @@
 
                                                         {if $show_add_to_cart}
                                                             <div class="button-container">
-                                                                {$add_to_cart = "add_to_cart_`$obj_id`"}
+                                                                {$add_to_cart = "add_to_cart_$obj_id"}
                                                                 {$smarty.capture.$add_to_cart nofilter}
                                                             </div>
                                                         {/if}
@@ -108,7 +102,7 @@
                                         {/if}
                                 {/hook}
                                 {hook name="products:product_list_form_close_tag"}
-                                    {$form_close="form_close_`$obj_id`"}
+                                    {$form_close="form_close_$obj_id"}
                                     {$smarty.capture.$form_close nofilter}
                                 {/hook}
                             </div>
