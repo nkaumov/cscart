@@ -410,28 +410,7 @@ Cart Power Dssign
 /////////////////////////////////////////
 
 
-.my_sub .ty-btn-go::before {
-    content: "Подписаться"; 
-    position: absolute;
-    top: 5px; 
-    left: 12px; 
-    line-height: 20px; 
-    color: #000000; 
-}
 
-.my_sub .ty-btn-go {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    padding: 0 10px;
-    min-width: 32px;
-    height: 30px;
-    border: 0px;
-    border-left: 1px solid #cdcdcd;
-    background: #006FE7;
-    cursor: pointer;
-    box-sizing: border-box;
-}
 
 //////////////////////////блог
 .my_blog {
@@ -522,7 +501,9 @@ Cart Power Dssign
 
 .my_brands {
     background-color: #F6F6F8;
-    height: 318px;
+    height: 368px;
+    margin-bottom: 0px;
+    max-width: 1920px;
 }
 
 .my_brands h1, h2 {
@@ -531,7 +512,8 @@ Cart Power Dssign
     font-style: normal;
     font-size: 28px;
     font-family: 'Montserrat Alternates', sans-serif;
-    margin-bottom: 20px; 
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 
@@ -574,6 +556,7 @@ Cart Power Dssign
     .my_brands {
         height: auto; 
         padding: 20px; 
+        
     }
 
     .my_brands h1, h2 {
@@ -635,4 +618,78 @@ Cart Power Dssign
     }
 }
 
+
+
+//////////////подписка
+
+.my_sub .ty-footer-form-block__form {
+    display: inline-block;
+    margin: 0 !important;
+    width: 463px;
+    
+    box-sizing: border-box;
+    border-radius: 16px; /* Применяем радиус только к левым углам */
+    overflow: hidden; /* Скрываем части кнопки, если она выходит за границы */
+}
+
+
+    .my_sub .ty-btn-go::before {
+        content: "ПОДПИСАТЬСЯ"; 
+        position: absolute;
+        top: 5px; 
+        left: 12px; 
+        line-height: 20px; 
+        color: #ffffff; 
+        font-size: 12px;
+    }
+    
+    .my_sub .ty-btn-go {
+        position: absolute;
+        top: 1px;
+        right: 0; /* Устанавливаем кнопку вплотную к правому краю */
+        padding: 0 10px;
+        min-width: 127px;
+        height: 32px;
+        border: 0;
+        border-left: 1px solid #cdcdcd;
+        background: #006FE7;
+        color: #fff;
+        cursor: pointer;
+        box-sizing: border-box;
+        margin-top: -1px;
+        border-radius: 0 16px 16px 0;
+        font-family: 'Montserrat Alternates', sans-serif
+    }
+    
+    .my_sub .ty-btn-go__icon {
+        position: absolute;
+        top: 5px;
+        left: 12px;
+        font-size: 20px;
+        line-height: 20px;
+        color: #808080;
+        display: none;
+    }
+
+    .my_sub .ty-wysiwyg-content h1, .ty-wysiwyg-content h2, .ty-wysiwyg-content h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+        margin-left: 15px;
+        font-family: 'Montserrat Alternates', sans-serif
+    }
+    
+    .my_sub p {
+        margin: 0;
+        padding: 6px 0;
+        color: rgb(252, 252, 252);
+        margin-left: 15px;
+        font-family: 'Montserrat Alternates', sans-serif
+    }
+    
+    .my_sub .ty-gdpr-agreement {
+        margin-bottom: 10px;
+        width: 453px;
+        margin-top: 30px;
+    }
 /* /Cart Power Dssign */
