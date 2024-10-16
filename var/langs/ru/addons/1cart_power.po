@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+
+msgctxt "Addons::name::1cart_power"
+msgid "1cart_power (example add-on)"
+msgstr "1cart_power (example add-on)"
+
+msgctxt "Addons::description::1cart_power"
+msgid "A dummy add-on to let devs see how add-ons work. You can also use it to introduce small changes not worthy of a separate add-on"
+msgstr "A dummy add-on to let devs see how add-ons work. You can also use it to introduce small changes not worthy of a separate add-on"
+
