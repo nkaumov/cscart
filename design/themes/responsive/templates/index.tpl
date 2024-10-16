@@ -43,6 +43,8 @@
     class="{if $pb_is_bottom_panel_open}bp-panel-active{/if} {if $is_theme_editor_open}te-theme-editor-active{/if}"
 >
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+
 {capture name="page_title"}
 {hook name="index:title"}
 {if $page_title}

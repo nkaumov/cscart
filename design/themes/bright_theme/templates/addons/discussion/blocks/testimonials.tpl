@@ -7,6 +7,7 @@
     {assign var="obj_prefix" value="`$block.block_id`000"}
 
     {if $block.properties.outside_navigation == "Y"}
+    >
         <div class="owl-theme ty-owl-controls">
             <div class="owl-controls clickable owl-controls-outside" id="owl_outside_nav_{$block.block_id}">
                 <div class="owl-buttons">
@@ -35,6 +36,7 @@
 
                             {if $discussion.type == "C" || $discussion.type == "B"}
                                 <div class="ty-discussion-post__message">{$post.message|escape|nl2br nofilter}</div>
+                                <p>test</p
                             {/if}
                         </div>
                     {/hook}

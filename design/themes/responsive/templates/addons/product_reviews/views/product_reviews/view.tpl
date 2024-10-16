@@ -10,6 +10,7 @@
 *}
 
 <div class="ty-product-reviews-view" id="{if $container_id}{$container_id}{else}content_product_reviews{/if}">
+
     {if $wrap == true}
         {capture name="content"}
         {include file="common/subheader.tpl" title=$title}
@@ -49,6 +50,7 @@
             locate_to_product_review_tab=$locate_to_product_review_tab
             product_reviews=$product_reviews
         }
+
 
     </section>
 
